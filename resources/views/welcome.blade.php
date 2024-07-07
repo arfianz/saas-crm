@@ -1,17 +1,35 @@
 <x-guest-layout>
-  <section class="bg-white text-gray-900">
-    <div class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center">
-      <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
-        <h1 class="text-4xl md:text-6xl font-bold mb-4">Empower Your Business</h1>
-        <p class="text-xl md:text-2xl mb-8">Streamline your customer relationships and grow your business with our CRM solution.</p>
-        <div>
-          <a href="#get-started" class="bg-blue-600 text-white py-2 px-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300 mr-4">Get Started</a>
-          <a href="#learn-more" class="bg-gray-200 text-gray-900 py-2 px-4 rounded-lg text-lg font-semibold hover:bg-gray-300 transition duration-300">Learn More</a>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Welcome to Our CRM') }}
+        </h2>
+    </x-slot>
+
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Kolom Kiri -->
+                    <div class="flex flex-col justify-center">
+                        <h3 class="text-2xl font-semibold mb-4">What is CRM?</h3>
+                        <p class="text-lg leading-relaxed mb-4">
+                            CRM, or Customer Relationship Management, is a technology for managing all your company’s relationships and interactions with customers and potential customers. The goal is simple: Improve business relationships. A CRM system helps companies stay connected to customers, streamline processes, and improve profitability.
+                        </p>
+                        <div class="flex space-x-4">
+                            <x-button>
+                                {{ __('Get Started') }}
+                            </x-button>
+                            <x-button>
+                                {{ __('Learn More') }}
+                            </x-button>
+                        </div>
+                    </div>
+                    <!-- Kolom Kanan -->
+                    <div class="flex justify-center items-center">
+                        <img src="images/undraw_data_re_80ws.svg" alt="CRM Illustration" class="max-w-full h-auto">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="md:w-1/2">
-        <img src="images/undraw_data_re_80ws.svg" alt="CRM Illustration" class="w-full h-auto">
-      </div>
     </div>
-  </section>
 </x-guest-layout>
